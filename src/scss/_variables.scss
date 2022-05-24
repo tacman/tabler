@@ -66,7 +66,7 @@ $display-font-sizes: (
   3: 4rem,
   4: 3.5rem,
   5: 3rem,
-  6: 2.5rem
+  6: 2rem
 ) !default;
 
 $lead-font-size: $font-size-base !default;
@@ -261,7 +261,9 @@ $size-spacers: (
 
 $size-values: map-merge($spacers, (
   25: 25%,
+  33: 33.33333%,
   50: 50%,
+  66: 66.66666%,
   75: 75%,
   100: 100%,
   auto: auto
@@ -395,10 +397,13 @@ $carousel-indicator-thumb-width: 4rem !default;
 
 $carousel-indicator-dot-width: .5rem !default;
 
-
 //close
 $btn-close-width: .75rem !default;
 $btn-close-opacity: .3 !default;
+
+// datagrid
+$datagrid-padding: 1.5rem !default;
+$datagrid-item-width: 15rem !default;
 
 //dropdown
 $dropdown-item-padding-x: .75rem !default;
@@ -530,6 +535,7 @@ $pagination-disabled-color: rgba($text-muted, .5) !default;
 
 //statuses
 $status-dot-size: .5rem !default;
+$status-height: 1.5rem !default;
 
 //steps
 $steps-border-width: 2px !default;
@@ -545,14 +551,21 @@ $spinner-border-width-sm: 1px !default;
 
 //tables
 $table-color: inherit !default;
+$table-cell-padding-x: .75rem !default;
+$table-cell-padding-y: .75rem !default;
 $table-border-color: $border-color-transparent !default;
-$table-head-border-color: $border-color-transparent !default;
-$table-head-padding-y: .5rem !default;
-$table-head-color: $text-muted !default;
-$table-head-bg: var(--#{$variable-prefix}border-color-light) !default;
+$table-th-border-color: $border-color-transparent !default;
+$table-th-padding-x: $table-cell-padding-x !default;
+$table-th-padding-y: .5rem !default;
+$table-th-color: $text-muted !default;
+$table-th-bg: var(--#{$variable-prefix}border-color-light) !default;
 $table-striped-order: even !default;
 $table-striped-bg: var(--#{$variable-prefix}border-color-light) !default;
 $table-group-separator-color: $border-color-transparent !default;
+
+$table-sort-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'><path d='M5 7l3 -3l3 3'/><path d='M5 10l3 3l3 -3'/></svg>") !default;
+$table-sort-asc-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16'><path fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='M5 7l3 3l3 -3'/></svg>") !default;
+$table-sort-desc-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16'><path fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='M5 10l3 -3l3 3'/></svg>") !default;
 
 //toasts
 $toast-border-color: $border-color !default;
