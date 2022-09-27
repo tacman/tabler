@@ -7,13 +7,13 @@
   z-index: 1;
   padding: .25rem .75rem;
   font-size: $h6-font-size;
-  font-weight: $font-weight-bold;
+  font-weight: var(--#{$prefix}font-weight-bold);
   line-height: 1.5rem;
   color: $white;
   text-align: center;
   text-transform: uppercase;
-  background: $primary;
-  border-color: $primary;
+  background: var(--#{$prefix}primary);
+  border-color: var(--#{$prefix}primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -37,11 +37,11 @@
   @if $enable-extra-colors {
     @each $color, $value in $extra-colors {
       &.bg-#{$color} {
-        border-color: $value;
+        border-color: var(--#{$prefix}#{$color});
       }
 
       &.bg-#{$color}-lt {
-        border-color: theme-color-lighter($value) !important;
+        border-color: rgba(var(--#{$prefix}#{$color}-rgb), .1) !important;
       }
     }
   }

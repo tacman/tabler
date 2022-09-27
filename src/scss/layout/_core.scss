@@ -1,26 +1,4 @@
 // stylelint-disable property-no-vendor-prefix
-:root {
-  font-size: 16px;
-  height: 100%;
-
-  @each $name, $color in $theme-colors {
-    --#{$prefix}#{$name}: #{$color};
-  }
-
-  @each $name, $color in $theme-colors {
-    --#{$prefix}#{$name}-rgb: #{to-rgb($color)};
-  }
-
-  --#{$prefix}card-bg: #{$card-bg};
-  --#{$prefix}card-bg-rgb: #{to-rgb($card-bg)};
-
-  --#{$prefix}border-color: #{$border-color};
-  --#{$prefix}border-color-rgb: #{to-rgb($border-color)};
-
-  --#{$prefix}border-color-light: #{$border-color-light};
-  --#{$prefix}border-color-light-rgb: #{to-rgb($border-color-light)};
-}
-
 body {
   overflow-y: scroll;
   letter-spacing: $body-letter-spacing;
@@ -29,6 +7,7 @@ body {
   font-feature-settings: "liga" 0;
   position: relative;
   min-height: 100%;
+  height: 100%;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,7 +50,7 @@ body {
     color: $body-color;
 
     @include media-breakpoint-up(md) {
-      border: 1px solid var(--#{$prefix}border-color);
+      border: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
       background: var(--#{$prefix}body-bg);
     }
 
